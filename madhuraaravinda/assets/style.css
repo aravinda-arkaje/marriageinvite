@@ -1,0 +1,296 @@
+* {
+    overflow: hidden;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.mainContainer {
+    height: 100vh;
+}
+
+.leftSide {
+    height: 100vh;
+}
+
+.lightGreen {
+    /* background: #6AFFDA; */
+    background: #323159;
+    /* animation-name: changeBGColor; */
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.lightBlue {
+    background: #6AFFDA;
+}
+
+@keyframes changeBGColor {
+    from {
+        background: #6AFFDA;
+    }
+
+    to {
+        background: #35def3;
+    }
+}
+
+.bottomLeftImg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    max-width: 858px;
+    max-height: 500px;
+}
+
+.bottomLeftImg img {
+    max-width: 100%;
+}
+
+.topRightImg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    max-width: 350px;
+}
+
+.topRightImg img {
+    max-width: 100%;
+}
+
+.rightSide {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 180px; */
+    /* margin-left: 140px; */
+}
+
+.rightSide img {
+    margin-left: -80px;
+}
+
+.mWebImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.mWebImg img {
+    justify-content: center;
+}
+
+.forMWeb {
+    visibility: hidden;
+    display: none;
+    width: 100%;
+}
+
+.mainOpening {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+}
+
+.mainOpening .imgLayer {
+    width: 100%;
+    position: absolute;
+}
+
+.invitationText {
+    position: absolute;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.mainOpening .imgLayer img {
+    width: 100%;
+}
+
+.layer1 {
+    z-index: 1999;
+}
+
+.layer2 {
+    z-index: 1998;
+}
+
+.layer3 {
+    z-index: 1997;
+}
+
+.layer4 {
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    z-index: 1996;
+    position: absolute;
+}
+
+.locationImage {
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 80px;
+}
+
+.onlymWeb {
+    visibility: hidden;
+    display: none;
+}
+
+.onlyWebLoad {
+    visibility: visible;
+    display: inline-block;
+}
+
+.rightSide>.onlyWebLoad,
+.mWebNameImage {
+    cursor: pointer;
+}
+
+.hanging-bar {
+    position: fixed;
+    right: 0px;
+    bottom: 50px;
+}
+
+.hanging-bar .location-text {
+    background: #323159;
+    padding: 10px 15px 10px 15px;
+    border-radius: 25px 0 0 25px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+    .hanging-bar .location-text {
+        background: #e54d8d;
+    }
+    /* .theContainer {
+        visibility: hidden;
+        display: none;
+    }
+    .forMWeb{
+        visibility: visible;
+        display: inline-block;
+    }
+    .mainOpening{
+        visibility: hidden;
+        display: none;
+    } */
+
+    .mainOpening .imgLayer img {
+        width: unset;
+        height: 100%;
+    }
+
+    .onlymWeb {
+        visibility: visible;
+        display: inline-block;
+    }
+
+    .onlyWebLoad {
+        /* visibility: hidden; */
+        /* display: none; */
+    }
+
+    .topRightImg {
+        max-width: 200px;
+    }
+
+    .bottomLeftImg {
+        max-width: 280px;
+    }
+
+    .leftSide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .locationImage {
+        cursor: pointer;
+        position: fixed;
+        top: 30px;
+        left: 20px;
+        width: 70px;
+    }
+
+    .mWebNameImage {
+        width: 220px;
+        /* width: 90%; */
+    }
+}
+
+.mainRainContainer {
+    display: none;
+    opacity: 0;
+}
+
+
+.rain__drop {
+    -webkit-animation-delay: calc(var(--d) * 1s);
+    animation-delay: calc(var(--d) * 1s);
+    -webkit-animation-duration: calc(var(--a) * 1s);
+    animation-duration: calc(var(--a) * 1s);
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: drop;
+    animation-name: drop;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    height: 30px;
+    left: calc(var(--x) * 1%);
+    position: absolute;
+    top: calc((var(--y) + 50) * -1px);
+}
+
+.rain__drop path {
+    fill: #fff;
+    opacity: var(--o);
+    -webkit-transform: scaleY(calc(var(--s) * 1.5));
+    transform: scaleY(calc(var(--s) * 1.5));
+}
+
+@-webkit-keyframes drop {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(100vh);
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes drop {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(100vh);
+        transform: translateY(100vh);
+    }
+}
