@@ -57,7 +57,7 @@ $(document).ready(function () {
 		window.open("https://goo.gl/maps/MHqDS1ZLdBX9iu4G9","_target")
 	})
 	$('.gallery-text').click(()=>{
-		window.open("file:///D:/learning_projects/my_project/madhuraaravinda/gallery.html","_target")
+		window.open("https://marriageinvite.in/madhuraaravinda/gallery.html","_target")
 	})
 
 	
